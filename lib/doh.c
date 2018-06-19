@@ -539,7 +539,7 @@ static DOHcode doh_decode(unsigned char *doh,
   unsigned int index = 12;
   DOHcode rc;
 
-  d->ttl = ~0;
+  d->ttl = INT_MAX;
 
   if(dohlen < 12)
     return DOH_TOO_SMALL_BUFFER; /* too small */
